@@ -1,0 +1,16 @@
+p{
+    color:darkcyan;
+    font-size: 24pt;
+}
+header h1{
+    color: blue;
+}
+main h2{
+    color: blueviolet;
+}
+main h1{
+    color: crimson;
+}
+footer p{
+    color: brown;
+}
