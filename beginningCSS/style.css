@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: #546E37;
+    background-color: #FAFBF2;
+}
+body p {
+    color: #546E37;
+}
+body h1, h2, h3{
+    color: #2D0628;
+}
+body dt {
+    color: #2D0628;
+    font-size: large;
+    font-style: oblique;
+}
+#emphasize {
+    color: #FF0B99;
+}
+#de-emphasize {
+    color: #546E37
+}
+.highlight {
+    font: italic;
+    color: #FF0B99;
+}
+footer p{
+    color: #2D0628;
+}
