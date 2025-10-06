@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: url('backgroundTexture.jpg') #FAFBF2; */
+    background-image: url('backgroundTexture.jpg');
+    background-repeat: repeat;
+    color: #546E37;
+    font-size: large;
+    background-color: #FAFBF2;
+}
+body p {
+    color: #546E37;
+}
+body h1, h2{
+    color: #2D0628;
+}
+footer p{
+    color: #2D0628;
+}
+header {
+    /* background: url('decoration.jpg') no-repeat top right; */
+    background-image: url('decoration.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.myList {
+    /* list-style-type: square; */
+    list-style-image: url('dot.jpg');
+}
