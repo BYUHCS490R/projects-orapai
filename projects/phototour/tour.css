@@ -1,0 +1,35 @@
+nav a {
+    color: blue;
+}
+
+.current {
+    color: black;
+}
+.myList {
+    list-style-type: circle;
+    color: #2D0628;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('background.jpg');
+    background-repeat: repeat;
+    color: #546E37;
+    font-size: large;
+    background-color: #FAFBF2;
+}
+body p {
+    color: #546E37;
+}
+body h1, h2{
+    color: #2D0628;
+}
+footer p{
+    color: #2D0628;
+    font-size: small;
+}
+header {
+    /* background: url('decoration.jpg') no-repeat top right; */
+    background-image: url('flag.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
