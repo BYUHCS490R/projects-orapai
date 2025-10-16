@@ -28,6 +28,8 @@ nav a:hover {
     padding: 10px;
     box-shadow: 5px 5px #888;
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
     width: 900px;
     border: thin solid rgb(200, 184, 184);    
 }
