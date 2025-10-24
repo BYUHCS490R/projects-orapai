@@ -1,0 +1,44 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+header {
+    background-color: aquamarine;
+    color: white;
+}
+header h1 {
+    margin: 0;
+}
+.sidebar h3 {
+    margin: 0;
+}
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color:rgb(28, 48, 228);
+    color: white;
+}
+nav a:hover {
+    color: aliceblue;
+    background-color: blue;
+}
+nav {
+    display: none;
+}
+.main-row {
+    display: flex;
+}
+.sidebar {
+    width: 200px;
+}
+.card img {
+    width: 100%;
+}
+.card {
+    width: 200px;
+    border: thin solid #000;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
