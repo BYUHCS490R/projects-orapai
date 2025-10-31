@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design Site</h1>
+    </header>
+    <main>
+        <h2>Table</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Credits</th>
+                </tr>
+                <tr>
+                    <th colspan="6">Fall 2025</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CS</td>
+                    <td rowspan="2">140</td>
+                    <td>Web Design</td>
+                    <td>11 AM MWF</td>
+                    <td>P3</td>
+                    <td>3 credits</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    
+                    <td>Web Design</td>
+                    <td>12 PM MWF</td>
+                    <td>P2</td>
+                    <td>3 credits</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>415</td>
+                    <td>Operating Systems</td>
+                    <td>2 PM MWF</td>
+                    <td>P2</td>
+                    <td>3 credits</td>
+                </tr>
+                <tr>
+                    <td>CS</td>
+                    <td>401</td>
+                    <td>Web Applications</td>
+                    <td>3 PM MWF</td>
+                    <td>P2</td>
+                    <td>3 credits</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5"id="total-credits">Total Credits</td>
+                    <td headers="total-credits">12</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h3>When do you use a table?</h3>
+        <p>When you have data to present.</p>
+        <h3>When do you not use a table?</h3>
+        <p>You dont use a table for layout or design purposes, for example, to position images or text on a webpage. Thats what CSS (like Flexbox or Grid) is for. Tables should only be used for tabular data.</p>
+        <h3>When do you need to do extra work for table accessibility?</h3>
+        <p>You need to add accessibility features when your table is complex (like when it has multiple headers or merged cells). This includes adding proper th tags, scope attributes, and sometimes aria labels to help screen readers interpret the data correctly.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
