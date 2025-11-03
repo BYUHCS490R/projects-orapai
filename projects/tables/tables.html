@@ -12,7 +12,7 @@
     </header>
     <main>
         <h2>Table</h2>
-        <table border="1">
+        <table class="schedule">
             <thead>
                 <tr>
                     <th>Department</th>
@@ -27,9 +27,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="grayish">
                     <td>CS</td>
-                    <td rowspan="2">140</td>
+                    <td rowspan="2" class="num">140</td>
                     <td>Web Design</td>
                     <td>11 AM MWF</td>
                     <td>P3</td>
@@ -67,12 +67,17 @@
                 </tr>
             </tfoot>
         </table>
-        <h3>When do you use a table?</h3>
+        <!-- <h3>When do you use a table?</h3>
         <p>When you have data to present.</p>
         <h3>When do you not use a table?</h3>
         <p>You dont use a table for layout or design purposes, for example, to position images or text on a webpage. Thats what CSS (like Flexbox or Grid) is for. Tables should only be used for tabular data.</p>
         <h3>When do you need to do extra work for table accessibility?</h3>
-        <p>You need to add accessibility features when your table is complex (like when it has multiple headers or merged cells). This includes adding proper th tags, scope attributes, and sometimes aria labels to help screen readers interpret the data correctly.</p>
+        <p>You need to add accessibility features when your table is complex (like when it has multiple headers or merged cells). This includes adding proper th tags, scope attributes, and sometimes aria labels to help screen readers interpret the data correctly.</p> -->
+        <h3>Why don't we use the border attribute?</h3>
+        <p>Because it is outdated and not part of modern web standards. Instead, we use CSS like border: 1px solid black to style tables and elements. It keeps the structure (HTML) separate from the design (CSS), which makes code cleaner and easier to maintain.
+        </p>
+        <h3>What is the easiest way to color every other row a different color?</h3>
+        <p>The easiest way is to use the CSS :nth-child()selector</p>
     </main>
     <footer>
 
