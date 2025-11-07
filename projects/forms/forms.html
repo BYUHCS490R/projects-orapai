@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <header>
+        <h1>Web Design Site</h1>
+    </header>
+    <main>
+        <h1>Forms</h1>
+        <form action="formprocess.html" method="get">
+        <div>
+            <label for="full-name">Full Name:</label>
+            <input type="text" name="fname" id="full-name" placeholder="Full name">
+        </div>
+        <!-- Last Name: <input type="text" value="lname"> <br> -->
+        <div>
+            Gender:
+            <label><input type="radio" name="gender" value="male">Male</label>
+            <label><input type="radio" name="gender" value="remale">Female</label>
+        </div>
+        <div>
+            <label for="email">Email:</label> 
+            <input type="email" name="email" id="email" value="your@gmail.com">
+        </div>
+        <div>
+            <label for="passw">Password:</label> 
+            <input type="password" name="pass" id="pass">
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <select name="state" id="state">
+            <option value="blank">-----</option>
+            <option value="CA">California</option>
+            <option value="HI"selected>Hawaii</option>
+            <option value="U">Utah</option>
+            </select>
+        </div>
+        <div>
+            <label><input type="checkbox" name="agree">I agree to the terms.</label>
+        </div>
+        <div>
+            <input type="submit" value="Sign Up">
+        </div>
+        </form>
+        <h2>The form tag has an "action" attribute. What does it do?</h2>
+        <p>The action attribute tells the browser where to send the form data when the user submits the form</p>
+        <h2>The form tag has a "method" attribute. What does it do?</h2>
+        <p>The method attribute specifies how the form data is sent to the server.</p>
+        <h2>What is the difference between a "POST" and a "GET"?</h2>
+        <p>GET sends data appended to the URL which is visible, it's when it read something. POST sends data in the request body which is hidden in the URL, it's when we change, add, update, or delete something</p>
+    </main>
+    <footer>
+        <p>&copy;2025 Ivy Orapa</p>
+    </footer>
+</body>
+</html>
