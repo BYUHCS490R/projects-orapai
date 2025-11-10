@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design Site</h1>
+    </header>
+    <main>
+        <h1>Forms</h1>
+        <form action="formprocess.html" method="get">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <div class="form-row">
+                <label for="full-name">Full Name:</label>
+                <input type="text" name="fname" id="full-name" placeholder="Full name">
+            </div>
+            <!-- Last Name: <input type="text" value="lname"> <br> -->
+            <div class="check-row">
+                <div class="spacer">Gender:</div>
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="remale">Female</label>
+            </div>
+            <div class="form-row">
+                <label for="email">Email:</label> 
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-row">
+                <label for="pass">Password:</label> 
+                <input type="password" name="pass" id="pass">
+            </div>
+            <div class="form-row">
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                <option value="blank">-----</option>
+                <option value="CA">California</option>
+                <option value="HI" selected>Hawaii</option>
+                <option value="U">Utah</option>
+                </select>
+            </div>
+            <div class="check-row">
+                <div class="spacer"></div>
+                <label><input type="checkbox" name="agree">I agree to the terms.</label>
+            </div>
+            <div class="form-row">
+                <div class="spacer"></div>
+                <input type="submit" value="Sign Up">
+            </div>
+        </fieldset>
+        </form>
+        <h2>What are different ways to style your form?</h2>
+        <p>You can style forms using inline CSS, external CSS. External CSS is best for consistent, reusable, and responsive form design</p>
+        <h2>How does flex help for both Desktop and Mobile phones?</h2>
+        <p>Flexbox helps by automatically adjusting the layout, showing elements side-by-side on desktops and stacking them vertically on mobile screens. It makes forms responisve and easy to use across different devices.</p>
+    </main>
+    <footer>
+        <p>&copy;2025 Ivy Orapa</p>
+    </footer>
+</body>
+</html>
