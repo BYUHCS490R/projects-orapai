@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing with JavaScript</title>
+    <link rel="stylesheet" href="formWithJS.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <form action="formprocess.html" method="get" id="myForm">
+        <fieldset>
+            <legend>Account Info</legend>
+            <div class="form-row">
+                <label for="fullname">Full Name:</label>
+                <input type="text" name="fname" id="fullname" placeholder="Full Name">
+            </div>
+            <div class="form-row">
+                <label for="email">Email:</label> 
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-row">
+                <label for="pass">Password:</label> 
+                <input type="password" name="pass" id="pass">
+            </div>
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age" placeholder="age">
+            </div>
+            <div class="form-row">
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                <option value="blank">-----</option>
+                <option value="HI">Hawaii</option>
+                <option value="CA" selected>California</option>
+                <option value="UT">Utah</option>
+                </select>
+            </div>
+            <div class="check-row">
+                <div class="spacer">Year in School.</div>
+                <label><input type="radio" name="year" value="freshman">Freshman</label>
+                <label><input type="radio" name="year" value="sophomore">Sophomore</label>
+            </div>
+            <div class="check-row">
+                <div class="spacer"></div>
+                <label><input type="checkbox" name="remember">Remember Me</label>
+            </div>
+            <div class="form-row">
+                <label for="comments">Comments:</label>
+                <input type="text" name="comments" id="comments">
+            </div>
+        </fieldset>
+        </form>
+        <h2>
+           What is JavaScript? How did it get its name? 
+        </h2>
+        <p>JavaScript is a core web technology used to make web pages interactive and dynamic, working alongside HTML and CSS. Its initial name, LiveScript, was changed to JavaScript primarily as a marketing move to associate it with the popular Java language at the time.
+</p>
+        <h2>What are the two ways you can run JavaScript?</h2>
+        <p>The two main ways are running it client-side inside a web browser, where the browser's engine executes the code embedded in an HTML file. The other is running it server-side or standalone using a runtime environment like [Node.js]</p>
+        <h2>What was the most popular front-end js library?</h2>
+        <p> The most popular historical front-end library was jQuery, which greatly simplified complex client-side tasks like DOM manipulation and AJAX for a wide range of websites.</p>
+        <h2>What is the most popular front-end js library today?</h2>
+        <p>  Today, the most popular choice is React, a library developed by Meta (Facebook) for efficiently building modern, component-based user interfaces.</p>
+    </main>
+    <footer>
+        <p>&copy;2025 Ivy Orapa</p>
+    </footer>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Form submitted");
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pass').value;
+            const age = document.getElementById('age').value;
+
+            if (!fullname || email) {
+                alert("You need a name and email.");
+                return;
+            }
+
+            if (!age || age < 18) {
+                alert("You need to be 18");
+                return;
+            }
+
+            const formData = {
+                name: fullname,
+                emai: email,
+                password: password,
+                age: age
+            };
+
+            console.log(formData);
+        });
+    </script>
+</body>
+</html>
