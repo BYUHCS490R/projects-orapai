@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main h1 {
+    color:crimson;
+}
+.form-row, .check-row {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+.form-row label {
+    width: 150px;
+    text-align: right;
+}
+.form-row input:not([type='submit']), .form-row select, .form-row textarea {
+    padding: 5px, 10px;
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.form-row input:not([type='submit']):focus, .form-row select:focus, .form-row textarea:focus {
+    padding: 5px, 10px;
+    background-color: white ;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.form-row input[type='submit'] {
+    background-color: rgb(118, 81, 240);
+    color: azure;
+    padding: 10px;
+}
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+fieldset{
+    background-color: aliceblue;
+    width: 80%;
+    margin: auto;
+}
+legend {
+    background-color: rgb(171, 237, 120);
+    color: black;
+    padding: 20px;
+}
+label, .spacer {
+    color: brown;
+}
+header, footer {
+    color:rgb(89, 146, 148);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+@media ONLY screen AND (max-width: 400px) {
+    .form-row, .check-row {
+        flex-direction: column;
+    }
+    fieldset {
+        width: 95%;
+    }
+    .form-row label, .spacer {
+        text-align: left;
+    }
+
+}

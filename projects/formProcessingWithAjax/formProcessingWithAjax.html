@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing with JavaScript</title>
+    <link rel="stylesheet" href="formProcessingWithAjax.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <div id="message">
+            <form action="formprocess.html" method="get" id="myForm">
+            <fieldset>
+            <legend>Account Info</legend>
+            <div class="form-row">
+                <label for="fullname">Full Name:</label>
+                <input type="text" name="fname" id="fullname" placeholder="Full Name">
+            </div>
+            <div class="form-row">
+                <label for="email">Email:</label> 
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="form-row">
+                <label for="pass">Password:</label> 
+                <input type="password" name="pass" id="pass">
+            </div>
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age" placeholder="age">
+            </div>
+            <div class="form-row">
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                <option value="blank">-----</option>
+                <option value="HI">Hawaii</option>
+                <option value="CA" selected>California</option>
+                <option value="UT">Utah</option>
+                </select>
+            </div>
+            <div class="check-row">
+                <div class="spacer">Year in School.</div>
+                <label><input type="radio" name="year" value="freshman">Freshman</label>
+                <label><input type="radio" name="year" value="sophomore">Sophomore</label>
+            </div>
+            <div class="check-row">
+                <div class="spacer"></div>
+                <label><input type="checkbox" name="remember">Remember Me</label>
+            </div>
+            <div class="form-row">
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="spacer"></div>
+                <input type="submit" value="Submit">
+            </div>
+            </fieldset>        
+            </form>
+        </div>
+        <h2>What is AJAX?</h2>
+        <p>AJAX is a way for a webpage to communicate with the server without refreshing the whole page. It makes websites feel faster and more interactive because only small parts of the page update.</p>
+        <h2>Why do you put your JS code in a separate file?</h2>
+        <p>Putting JavaScript in a separate file keeps your HTML cleaner and easier to read. It also makes your site load faster and your code easier to update because the browser can reuse the same JS file across pages.</p>
+    </main>
+    <footer>
+        <p>&copy;2025 Ivy Orapa</p>
+    </footer>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Form submitted");
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pass').value;
+            const age = document.getElementById('age').value;
+
+            if (!fullname || !email) {
+                alert("You need a name and email.");
+                return;
+            }
+
+            if (!age || age < 18) {
+                alert("You need to be 18");
+                return;
+            }
+
+            const formData = {
+                name: fullname,
+                emai: email,
+                password: password,
+                age: age
+            };
+
+            console.log(formData);
+            const xhr = new XMLHttpRequest();
+            xhr.open("Get", "submit.json", true);
+            xhr.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState===4 && xhr.status === 200) {
+                    alert("Form submitted successfully!");
+                    const response = JSON.parse(xhr.responseText);
+                    console.log(response);
+                    //document.getElementByID('myForm').reset();
+                    document.getElementById('myForm').innerHTML='';
+                    document.getElementById('message').innerText = response.message;
+                }else if (xhr.readyState === 4) {
+                    alert("Error submitting form.");
+                }
+            };
+            xhr.send(JSON.stringify(formData));
+        });
+    </script>
+</body>
+</html>
