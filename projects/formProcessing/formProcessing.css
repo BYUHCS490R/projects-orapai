@@ -14,13 +14,13 @@ main h1 {
     text-align: right;
 }
 .form-row input:not([type='submit']), .form-row select, .form-row textarea {
-    padding: 5px, 10px;
+    padding: 5px 10px;
     background-color: antiquewhite;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
 }
 .form-row input:not([type='submit']):focus, .form-row select:focus, .form-row textarea:focus {
-    padding: 5px, 10px;
+    padding: 5px 10px;
     background-color: white ;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
