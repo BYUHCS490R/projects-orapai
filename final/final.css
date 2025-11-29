@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: rgb(245, 187, 245);
+    color: black;
+}
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+main h2 {
+    margin: 0;
+    text-align: center;
+}
+.sidebar h2 {
+    margin: 0;
+    text-align: center;
+}
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    background-color:rgb(122, 63, 123);
+    color: white;
+}
+nav a:hover {
+    color: aliceblue;
+    background-color: magenta;
+}
+.current {
+    color: black;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: antiquewhite;
+}
+.main-row {
+    display: flex;
+}
+.sidebar {
+    width: 200px;
+}
+.card img {
+    width: 100%;
+}
+.card {
+    width: 200px;
+    border: thin solid white;
+    box-shadow: 3px 3px 3px rgb(200, 200, 200, 0.8);
+    margin: 5px;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+main {
+    margin-left: 20px;
+}
+main h1 {
+    color:crimson;
+}
+    .form-row, .check-row {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+.form-row label {
+    width: 150px;
+    text-align: right;
+}
+.form-row input:not([type='submit']), .form-row select, .form-row textarea {
+    padding: 5px, 10px;
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.form-row input:not([type='submit']):focus, .form-row select:focus, .form-row textarea:focus {
+    padding: 5px, 10px;
+    background-color: white ;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.form-row input[type='submit'] {
+    background-color: rgb(118, 81, 240);
+    color: azure;
+    padding: 10px;
+}
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+fieldset{
+    background-color: aliceblue;
+    width: 80%;
+    margin: auto;
+}
+legend {
+    background-color: rgb(171, 237, 120);
+    color: black;
+    padding: 20px;
+}
+label, .spacer {
+    color: brown;
+}
+header, footer {
+    color:rgb(89, 146, 148);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    
+}
+.content {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+}
+.table {
+    padding: 20px;
+    width: 200%;
+    caption-side: bottom;
+    border-style: double;
+    border:#000;
+}
+.table thead tr {
+    background-color:rgb(119, 119, 118);
+    color: white;
+}
+.border {
+    border:thick #000;
+}
+.data {
+    background-color: #f6f6f6;
+}
+.border tr:nth-child(even) { /*{ pseudo class */
+    border-bottom: thick solid #000;
+}
+.table tfoot tr {
+    background-color: rgb(250, 241, 206);
+    color: black;
+}
+footer {
+    font-size: small;
+}
+@media ONLY screen and (max-width: 500px){
+    body {
+        background-color:antiquewhite;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .main-row {
+        flex-direction: column-reverse;
+    }
+    .sidebar {
+        width: 200px;
+    }
+    .card {
+        width: 200px;
+    }
+    .form-row, .check-row {
+        flex-direction: column;
+    }
+    fieldset {
+        width: 95%;
+    }
+    .form-row label, .spacer {
+        text-align: left;
+    }
+}    
+@media ONLY print {
+    body {
+    font-family: 'Courier New', Courier, monospace;
+    }
+    header {
+        background-color: aquamarine;
+        color: white;
+    }
+    header h1 {
+        margin: 0;
+        text-align: center;
+    }
+    .sidebar h2 {
+        margin: 0;
+    }
+    nav a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        background-color:rgb(28, 48, 228);
+        color: white;
+    }
+    nav a:hover {
+        color: aliceblue;
+        background-color: blue;
+    }
+    nav {
+        display: none;
+    }
+    .main-row {
+        display: flex;
+    }
+    .sidebar {
+        margin: 5px;
+        width: 200px;
+    }
+    .card img {
+        width: 100%;
+    }
+    .card {
+        margin: 5px;
+        width: 200px;
+        border: thin solid white;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+
+    .form-row, .check-row {
+        flex-direction: column;
+    }
+    fieldset {
+        width: 95%;
+    }
+    .form-row label, .spacer {
+        text-align: left;
+    }
+}
