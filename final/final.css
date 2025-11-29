@@ -38,6 +38,7 @@ nav {
 }
 .main-row {
     display: flex;
+    background-color: antiquewhite;
 }
 .sidebar {
     width: 200px;
@@ -54,6 +55,7 @@ nav {
 .row {
     display: flex;
     flex-flow: row wrap;
+    background-color: antiquewhite;
 }
 main {
     margin-left: 20px;
@@ -167,6 +169,20 @@ footer {
     .form-row label, .spacer {
         text-align: left;
     }
+    .card img {
+    width: 100%;
+    }
+    .card {
+        width: 200px;
+        border: thin solid white;
+        box-shadow: 3px 3px 3px rgb(200, 200, 200, 0.8);
+        margin: 5px;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: antiquewhite;
+    }
 }    
 @media ONLY print {
     body {
@@ -216,8 +232,6 @@ footer {
         display: flex;
         flex-flow: row wrap;
     }
-
-
     .form-row, .check-row {
         flex-direction: column;
     }
