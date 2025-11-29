@@ -12,7 +12,7 @@
     </header>
     <nav>
         <a href="homepage.html">Home</a>
-        <a href="firstcontent.html"class="current">Learn and Speak a New Language</a>
+        <a href="firstcontent.html" class="current">Learn and Speak a New Language</a>
         <a href="secondcontent.html">Travel to Spain</a>
         <a href="thirdcontent.html">Skydive</a>
         <a href="fourthcontent.html">Visit All Asian Country</a>
@@ -333,30 +333,29 @@
             </div>
         </fieldset>
         </form>
-    </main>
-    <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert("Thank you! Suggestions submitted.");
-            document.getElementById('myForm').reset();
-            return false;
+        <script>
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert("Thank you! Suggestions submitted.");
+                document.getElementById('myForm').reset();
+                return false;
 
-            const name = document.getElementById('name').value;
-            const country = document.getElementById('country').value;
-            
-            if (!name) {
-                alert("Don't forget to enter you name.");
-                return;
-            }
+                const name = document.getElementById('name').value;
+                const country = document.getElementById('country').value;
+                
+                if (!name) {
+                    alert("Don't forget to enter you name.");
+                    return;
+                }
 
-            const formData = {
-                name: name,
-                country: country
-            };
+                const formData = {
+                    name: name,
+                    country: country
+                };
 
-            console.log(formData);
-        });
-    </script>
+                console.log(formData);
+            });
+        </script>
     </main>
     <footer>
         <p>&copy;2025 Ivy Orapa. Photos and infos courtesy of google, wikepedia, and bucketlisttravels.</p>

@@ -117,7 +117,7 @@ header, footer {
 }
 .table {
     padding: 20px;
-    width: 200%;
+    width: auto;
     caption-side: bottom;
     border-style: double;
     border:#000;
