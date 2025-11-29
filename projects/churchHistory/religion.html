@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church History in Asia</title>
+    <link rel="stylesheet" href="religion.css">
+    <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Church History in Asia — Interactive Map</h1>
+    </header>
+    <main>
+        <!-- Leaflet Map -->
+    <div id="map"></div>
+
+    <script>
+        // Create the map centered on Asia
+        var map = L.map('map').setView([35, 105], 4);
+
+        // Use OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18
+        }).addTo(map);
+
+        // Add markers with historical facts
+        // Japan
+        L.marker([35.68, 139.69]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/df6b96801c9f11ec99eeeeeeac1ea2207e7c517b/full/320%2C/0/default" class="popup-img">
+                <p>Tokyo Japan Temple - First temple in Asia. Dedicated on October 27, 1980 and was rededicated on July 3, 2022</p>
+                <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/tokyo-japan-temple/1980-10-27?lang=eng">Rededicatory Prayer</a>   
+                <p>1901: First missionaries arrived.</p>
+                <p>1948: Mission reestablished after closure.</p>      
+            `);
+        // Philippines
+        L.marker([14.6, 121.0]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/cf62ebb59aefa1d2856981fb77574fb9982c5fad/full/500%2C/0/default" class="popup-img">
+                <p>Manila Philippines Temple - Dedicated on September 25, 1984. </p>
+                <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/manila-philippines-temple/1984-09-25?lang=eng">Dedicatory Prayer</a>        
+                <p>1970: First stake organized.</p>
+                <p>2025: 13 temples are operating, under construction, or announced in the Philippines.</p> 
+            `);
+        // India
+        L.marker([28.61, 77.20]).addTo(map)
+            .bindPopup(`
+                <img src="https://churchofjesuschrist.org/imgs/d66f180015b4ab9db41e6eee171152a4008d5cb1/full/500%2C/0/default" class="popup-img">
+                <p>Bengaluru India Temple - Announced on April 1, 2018. Under construction.</p>         
+                <p>1851: First missionaries arrive, mission closes in 1856.</p>
+                <p>1961: First baptism in independent India.</p>
+                <p>1993: India Bangalore Mission officially organized.</p>
+                <p>2012: First stake created in Hyderabad.</p>
+            `);        
+        // South Korea
+        L.marker([37.56, 126.97]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/57efcc4b6a1c664c934aa672b0f8de38a8f539c4/full/500%2C/0/default" class="popup-img">
+                <p>Seoul Korea Temple - Dedicated on December 14, 1985</p>
+                <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/seoul-korea-temple/1985-12-14?lang=eng">Dedicatory Prayer</a>         
+                <p>1945-1947: First church meethings held by U.S. military personnel.</p>
+                <p>1952: First baptisms.</p>
+                <p>1973: First stake in mainland Asia organized in Seoul.</p>
+           `);        
+        // Taiwan
+        L.marker([25.03, 121.56]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/292ab7814b6355ac40236fbc39eb1a4ed8c058a7/full/500%2C/0/default" class="popup-img">
+                <p>Taipei Taiwan Temple - Dedicated on November 17, 1984.</p>
+                <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/taipei-taiwan-temple/1984-11-17?lang=eng">Dedicatory Prayer</a>
+                <p>1956: First missionaries arrive in Taipei.</p>
+                <p>1966: First chapel completed.</p>        
+            `);
+        // Singapore
+        L.marker([1.3521, 103.8198]).addTo(map)
+            .bindPopup(`
+                <img src="https://churchofjesuschrist.org/imgs/9cc254eeb3b411edb462eeeeac1e8b71c425eaeb/full/500%2C/0/default" class="popup-img">
+                <p>Singapore Temple - Announced on April 4, 2021. Under construction.</p> 
+                <p>1963: Latter-Day Saints begin holding meetings.</p>   
+                <p>1968: First missionaries arrive.</p> 
+                <p>1970: Government restrictions on missionary visas begin (lasted about a decade).</p>
+                <p>1995: Singapore stake organized.</p>   
+            `);
+
+        // Thailand (Bangkok)
+        L.marker([13.7563, 100.5018]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/4052d9f8ff0e11edb9dbeeeeac1e97aea1b93079/full/500%2C/0/default" class="popup-img">
+                <p>Bangkok Thailand Temple - Dedicated on October 22, 2023.</p>
+                <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/bangkok-thailand-temple/2023-10-22?lang=eng">Dedicatory Prayer</a>    
+                <p>1854: First missionary visit (brief).</p> 
+                <p>1961: Regular worship services (English branch) authorized.</p> 
+                <p>1966: Dedicated for the preaching of the gospel; Thailand District organized.</p> 
+                <p>1995: Bangkok stake created.</p>  
+            `);
+
+        // Cambodia (Phnom Penh)
+        L.marker([11.5564, 104.9282]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/9d83d7591234e310fff91e15df4051d176a22708/full/500%2C/0/default" class="popup-img">
+                <p>Phnom Penh Cambodia Temple - Announced on October 7, 2018. Under construction</p>  
+                <p>1994: Church officially recognized; first missionaries arrive and first baptism takes place.</p>
+                <p>1996: Dedicated for the preaching of the gospel.</p> 
+                <p>2014: First two stakes organized in Phnom Penh.</p>    
+            `);
+
+        // Mongolia (Ulaanbaatar)
+        L.marker([47.8864, 106.9057]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/az6tow3bmievwjahtohx0jsyio2njarv4fghe30s/full/500%2C/0/default" class="popup-img">
+                <p>Ulaanbaatar Mongolia Temple - Announced October 1, 2023</p>  
+                <p>1992: Senior missionaries arrive to teach school.</p>
+                <p>1993: First converts baptized.</p>
+                <p>1995: Mongolia Ulaanbaatar Mission organized.</p>   
+                <p>2009: First stake organized in Ulaanbaatar.</p> 
+            `);
+
+        // Malaysia (Kuala Lumpur)
+        L.marker([3.1390, 101.6869]).addTo(map)
+            .bindPopup(`
+                <img src="" class="popup-img">
+                <p>Christianity arrived via Jesuit missionaries like St. Francis Xavier.</p>  
+                <p>1970: Small groups of expatriate and local members gather.</p>  
+                <p>1977: Official government recognition.</p>
+                <p>1981: First native Malaysian elders called as missionries; district organized.</p> 
+                <p>1995: Country dedicated for preaching the gospel.</p>   
+            `);
+ 
+        // Hong Kong
+        L.marker([22.3193, 114.1694]).addTo(map)
+            .bindPopup(`
+                <img src="https://www.churchofjesuschrist.org/imgs/cd518a59ee7511eca935eeeeac1ecdb94609c80b/full/500%2C/0/default" class="popup-img">
+                <p>Hong Kong China Temple - Dedicated on May 26, 1996 and was rededicated on June 19, 2022.</p>
+                <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/hong-kong-china-temple/2022-06-19?lang=eng">Rededicatory Prayer</a>  
+                <p>1949: Missionary headquarters established.</p> 
+                <p>1955: Hong Kong becomes headquarters of the Southern East Mission.</p>
+                <p>1975: Membership reaches 10,000.</p>    
+            `);
+    </script> 
+
+    <div class="image-container">
+        <img src="https://www.freeworldmaps.net/asia/southeastasia/southeastasia-geography-map.jpg"
+            alt="Asia Map"
+            width="500"
+            usemap="#asiamap">
+    </div>
+    </main>
+    <footer>
+        <p>&copy;2025 Ivy Orapa. Photos and infos courtesy of lds.org</p>
+    </footer>
+</body>
+</html>
