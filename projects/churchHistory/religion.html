@@ -6,17 +6,17 @@
     <title>Church History in Asia</title>
     <link rel="stylesheet" href="religion.css">
     <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <header>
         <h1>Church History in Asia — Interactive Map</h1>
     </header>
     <main>
-        <!-- Leaflet Map -->
+    <!-- Leaflet Map -->
     <div id="map"></div>
     <script>
         // Create the map centered on Asia
@@ -32,6 +32,7 @@
         L.marker([35.68, 139.69]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/df6b96801c9f11ec99eeeeeeac1ea2207e7c517b/full/320%2C/0/default" class="popup-img">
+                <p class="country">Japan</p>
                 <p>Tokyo Japan Temple - First temple in Asia. Dedicated on October 27, 1980 and was rededicated on July 3, 2022</p>
                 <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/tokyo-japan-temple/1980-10-27?lang=eng">Rededicatory Prayer</a>   
                 <p>1901: First missionaries arrived.</p>
@@ -41,6 +42,7 @@
         L.marker([14.6, 121.0]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/cf62ebb59aefa1d2856981fb77574fb9982c5fad/full/500%2C/0/default" class="popup-img">
+                <p class="country">Philippines</p>
                 <p>Manila Philippines Temple - Dedicated on September 25, 1984. </p>
                 <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/manila-philippines-temple/1984-09-25?lang=eng">Dedicatory Prayer</a>        
                 <p>1970: First stake organized.</p>
@@ -50,6 +52,7 @@
         L.marker([28.61, 77.20]).addTo(map)
             .bindPopup(`
                 <img src="https://churchofjesuschrist.org/imgs/d66f180015b4ab9db41e6eee171152a4008d5cb1/full/500%2C/0/default" class="popup-img">
+                <p class="country">India</p>
                 <p>Bengaluru India Temple - Announced on April 1, 2018. Under construction.</p>         
                 <p>1851: First missionaries arrive, mission closes in 1856.</p>
                 <p>1961: First baptism in independent India.</p>
@@ -60,6 +63,7 @@
         L.marker([37.56, 126.97]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/57efcc4b6a1c664c934aa672b0f8de38a8f539c4/full/500%2C/0/default" class="popup-img">
+                <p class="country">South Korea</p>
                 <p>Seoul Korea Temple - Dedicated on December 14, 1985</p>
                 <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/seoul-korea-temple/1985-12-14?lang=eng">Dedicatory Prayer</a>         
                 <p>1945-1947: First church meethings held by U.S. military personnel.</p>
@@ -70,6 +74,7 @@
         L.marker([25.03, 121.56]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/292ab7814b6355ac40236fbc39eb1a4ed8c058a7/full/500%2C/0/default" class="popup-img">
+                <p class="country">Taiwan</p>
                 <p>Taipei Taiwan Temple - Dedicated on November 17, 1984.</p>
                 <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/taipei-taiwan-temple/1984-11-17?lang=eng">Dedicatory Prayer</a>
                 <p>1956: First missionaries arrive in Taipei.</p>
@@ -79,6 +84,7 @@
         L.marker([1.3521, 103.8198]).addTo(map)
             .bindPopup(`
                 <img src="https://churchofjesuschrist.org/imgs/9cc254eeb3b411edb462eeeeac1e8b71c425eaeb/full/500%2C/0/default" class="popup-img">
+                <p class="country">Singapore</p>
                 <p>Singapore Temple - Announced on April 4, 2021. Under construction.</p> 
                 <p>1963: Latter-Day Saints begin holding meetings.</p>   
                 <p>1968: First missionaries arrive.</p> 
@@ -90,6 +96,7 @@
         L.marker([13.7563, 100.5018]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/4052d9f8ff0e11edb9dbeeeeac1e97aea1b93079/full/500%2C/0/default" class="popup-img">
+                <p class="country">Thailand</p>
                 <p>Bangkok Thailand Temple - Dedicated on October 22, 2023.</p>
                 <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/bangkok-thailand-temple/2023-10-22?lang=eng">Dedicatory Prayer</a>    
                 <p>1854: First missionary visit (brief).</p> 
@@ -102,6 +109,7 @@
         L.marker([11.5564, 104.9282]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/9d83d7591234e310fff91e15df4051d176a22708/full/500%2C/0/default" class="popup-img">
+                <p class="country">Cambodia</p>
                 <p>Phnom Penh Cambodia Temple - Announced on October 7, 2018. Under construction</p>  
                 <p>1994: Church officially recognized; first missionaries arrive and first baptism takes place.</p>
                 <p>1996: Dedicated for the preaching of the gospel.</p> 
@@ -112,6 +120,7 @@
         L.marker([47.8864, 106.9057]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/az6tow3bmievwjahtohx0jsyio2njarv4fghe30s/full/500%2C/0/default" class="popup-img">
+                <p class="country">Mongolia</p>
                 <p>Ulaanbaatar Mongolia Temple - Announced October 1, 2023</p>  
                 <p>1992: Senior missionaries arrive to teach school.</p>
                 <p>1993: First converts baptized.</p>
@@ -122,7 +131,7 @@
         // Malaysia (Kuala Lumpur)
         L.marker([3.1390, 101.6869]).addTo(map)
             .bindPopup(`
-                <a href="https://www.churchofjesuschrist.org/learn/facts-statistics/malaysia?lang=eng">Kuala Lumpur, Malaysia</a>
+                <a href="https://www.churchofjesuschrist.org/learn/facts-statistics/malaysia?lang=eng" class="country">Malaysia</a>
                 <p>No temple announcement yet.</p>  
                 <p>1970: Small groups of expatriate and local members gather.</p>  
                 <p>1977: Official government recognition.</p>
@@ -134,6 +143,7 @@
         L.marker([22.3193, 114.1694]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/cd518a59ee7511eca935eeeeac1ecdb94609c80b/full/500%2C/0/default" class="popup-img">
+                <p class="country">Hong Kong</p>
                 <p>Hong Kong China Temple - Dedicated on May 26, 1996 and was rededicated on June 19, 2022.</p>
                 <a href="https://www.churchofjesuschrist.org/temples/dedicatory-prayer/hong-kong-china-temple/2022-06-19?lang=eng">Rededicatory Prayer</a>  
                 <p>1949: Missionary headquarters established.</p> 
@@ -144,6 +154,7 @@
         L.marker([-6.2088, 106.8456]).addTo(map)
             .bindPopup(`
                 <img src="https://www.churchofjesuschrist.org/imgs/az6tow3bmievwjahtohx0jsyio2njarv4fghe30s/full/640%2C/0/default" class="popup-img"> 
+                <p class="country">Indonesia</p>
                 <p>Jakarta Indonesia Temple - Announced on April 2, 2023.</p> 
                 <p>1969: Dedicated for missionary work.
                 </p> <p>1970: First missionaries arrive; first branch organized; Church officially recognized.</p> 
@@ -153,7 +164,7 @@
         // Vietnam (Hanoi) 
         L.marker([21.0285, 105.8542]).addTo(map) 
             .bindPopup(`
-                <p>Vietnam</p>
+                <p class="country">Vietnam</p>
                 <p>No temple announcement yet.</p> 
                 <p>1950s: Latter-day Saints (primarily U.S. military) begin presence.</p> 
                 <p>Early 1990s: Church reestablished; branches organized in Hanoi and Ho Chi Minh City.</p> 
@@ -164,7 +175,7 @@
         // Myanmar (Yangon) 
         L.marker([16.8532, 96.1667]).addTo(map) 
             .bindPopup(`
-                <p>Myanmar</p>
+                <p class="country">Myanmar</p>
                 <p>No temple announcement yet.</p> 
                 <p>Late 1970s/Early 1980s: First Burmese converts baptized in Thailand.</p> 
                 <p>1998: Senior missionaries begin serving (humanitarian work).</p> 
@@ -175,7 +186,7 @@
         // Laos (Vientiane) 
         L.marker([17.9757, 102.6331]).addTo(map) 
             .bindPopup(`
-                <p>Laos</p>
+                <p class="country">Laos</p>
                 <p>No temple announcement yet.</p> 
                 <p>Early 2000s: First native members (returned from abroad) reside in Laos.</p> 
                 <p>2003: Vientiane Branch organized.</p> <p>2006: Dedicated for missionary work.</p> 
@@ -185,7 +196,7 @@
         // China (Beijing) 
             L.marker([39.9042, 116.4074]).addTo(map) 
             .bindPopup(`
-                <a href="https://www.churchofjesuschrist.org/China">Beijing, People's Republic of China</a> 
+                <a href="https://www.churchofjesuschrist.org/China" class="country">China</a> 
                 <p>Shanghai People's Republic of China Temple - Announced on APril 5, 2020.</p> 
                 <p>The Church's presence is restricted, with a focus on non-proselyting activities.</p> 
                 <p>Late 1990s: Local Chinese members (baptized overseas) begin having Sunday meetings.</p> 

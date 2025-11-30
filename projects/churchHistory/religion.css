@@ -24,6 +24,11 @@ h1, h2 {
     width: 200px;
     border-radius: 8px;
 }
+.country {
+    font-size: larger;
+    font-weight: 700;
+    
+}
 footer {
     font-size: small;
     text-align: center;
