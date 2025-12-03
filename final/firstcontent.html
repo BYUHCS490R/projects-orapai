@@ -69,6 +69,11 @@
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" placeholder="Name">
             </div>
+            <div class="check-row">
+                <div class="spacer">Gender:</div>
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="female">Female</label>
+            </div>
             <div class="form-row">
                 <label for="country">Country:</label>
                 <select name="country" id="country">
@@ -336,22 +341,32 @@
         <script>
             document.getElementById('myForm').addEventListener('submit', function(event) {
                 event.preventDefault();
-                alert("Thank you! Suggestions submitted.");
-                document.getElementById('myForm').reset();
-                return false;
 
                 const name = document.getElementById('name').value;
                 const country = document.getElementById('country').value;
+                const comments = document.getElementById('comments').value;
                 
+                if (!comments) {
+                    alert("Don't forget to enter your suggestions.");
+                    return;
+                }
                 if (!name) {
-                    alert("Don't forget to enter you name.");
+                    alert("Enter your name.");
+                    return;
+                }
+                if (!country) {
+                    alert("Enter your country.");
                     return;
                 }
 
                 const formData = {
                     name: name,
-                    country: country
+                    country: country,
+                    comments: comments
                 };
+                alert("Thank you! Suggestions submitted.");
+                document.getElementById('myForm').reset();
+                return false;
 
                 console.log(formData);
             });
