@@ -43,6 +43,9 @@ nav {
 .sidebar {
     width: 200px;
 }
+img {
+    width: 100%;
+    }
 .card img {
     width: 100%;
 }
@@ -57,6 +60,7 @@ nav {
 .row {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     background-color: antiquewhite;
 }
 main {
@@ -116,12 +120,12 @@ header, footer {
 }
 .content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     padding-right: 20px;
     width: 95%;
 }
 .table {
-    padding: 20px;
+    padding: 30px;
     width: 80%;
     caption-side: bottom;
     border-style: double;
@@ -130,6 +134,10 @@ header, footer {
 .table thead tr {
     background-color:rgb(119, 119, 118);
     color: white;
+    padding: 10px;
+}
+.table thead tr {
+    width: 300%;
 }
 .border {
     border:thick #000;
@@ -137,12 +145,24 @@ header, footer {
 .data {
     background-color: #f6f6f6;
 }
+.alphabet {
+    width: 150%;
+    padding: 10px;
+    background-color: #000;
+    color: black;
+}
 .border tr:nth-child(even) { /*{ pseudo class */
     border-bottom: thick solid #000;
 }
 .table tfoot tr {
     background-color: rgb(250, 241, 206);
     color: black;
+}
+.parent {
+    display: flex;
+}
+.child {
+    flex-direction: row;
 }
 footer {
     font-size: small;
@@ -159,6 +179,9 @@ footer {
     }
     .sidebar {
         width: 200px;
+    }
+    img {
+        width: 100%;
     }
     .card img {
         width: 100%;
@@ -221,6 +244,9 @@ footer {
     .sidebar {
         margin: 5px;
         width: 200px;
+    }
+    img {
+        width: 100%;
     }
     .card img {
         width: 100%;
