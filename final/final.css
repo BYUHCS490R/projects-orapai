@@ -149,7 +149,6 @@ header, footer {
     width: 150%;
     padding: 10px;
     background-color: #000;
-    color: black;
 }
 .border tr:nth-child(even) { /*{ pseudo class */
     border-bottom: thick solid #000;
@@ -163,6 +162,9 @@ header, footer {
 }
 .child {
     flex-direction: row;
+}
+iframe {
+  border: none;
 }
 footer {
     font-size: small;
@@ -207,6 +209,9 @@ footer {
         display: flex;
         flex-flow: row wrap;
         background-color: antiquewhite;
+    }
+    iframe {
+        border: none;
     }
 }    
 @media ONLY print {
@@ -268,5 +273,8 @@ footer {
     }
     .form-row label, .spacer {
         text-align: left;
+    }
+    iframe {
+        border: none;
     }
 }
